@@ -12,7 +12,12 @@ public class Problem
 		{
 			if (0 >= input[i] || input.length < input[i])
 			{
-				int tmp = input[--newLength];
+				int tmp;
+				do
+				{
+					tmp = input[--newLength];
+				} while ((0 >= tmp || input.length < tmp) && i < newLength);
+				
 				input[newLength] = input[i];
 				input[i] = tmp;
 			}

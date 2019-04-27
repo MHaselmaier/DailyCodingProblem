@@ -74,4 +74,11 @@ class ProblemTest
 	{
 		assertEquals(11, Problem.findFirstMissingPositiveInteger(new int[] {10, 1, 9, 2, 8, 3, 7, 4, 6, 5}));
 	}
+	
+	@Test
+	void testSwappingNegativeWithAnotherNegative()
+	{
+		int[] input = {-3, 4, 2, -1};
+		assertEquals(1, Problem.findFirstMissingPositiveInteger(input));
+	}
 }
